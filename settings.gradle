@@ -1,0 +1,15 @@
+pluginManagement {
+    repositories {
+        maven { url 'https://dl.bintray.com/kotlin/kotlin-eap' }
+        mavenCentral()
+        maven { url 'https://plugins.gradle.org/m2/' }
+    }
+}
+
+rootProject.name = 'Server'
+
+include ':framework'
+include ':project'
+
+project(':framework').projectDir = "$rootDir/framework" as File
+project(':project').projectDir = "$rootDir/project" as File
